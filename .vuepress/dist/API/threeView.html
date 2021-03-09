@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ThreeView | DT-Three</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="仅供公司内部使用">
+    
+    <link rel="preload" href="/assets/css/0.styles.00c5e757.css" as="style"><link rel="preload" href="/assets/js/app.4326898c.js" as="script"><link rel="preload" href="/assets/js/2.b96e8ba7.js" as="script"><link rel="preload" href="/assets/js/16.46911f9e.js" as="script"><link rel="prefetch" href="/assets/js/10.ed40142e.js"><link rel="prefetch" href="/assets/js/11.9ba28502.js"><link rel="prefetch" href="/assets/js/12.2cfff503.js"><link rel="prefetch" href="/assets/js/13.abd177ea.js"><link rel="prefetch" href="/assets/js/14.9eab2d71.js"><link rel="prefetch" href="/assets/js/15.d4e88f88.js"><link rel="prefetch" href="/assets/js/17.83c0bebe.js"><link rel="prefetch" href="/assets/js/18.027a777e.js"><link rel="prefetch" href="/assets/js/19.84f9ac41.js"><link rel="prefetch" href="/assets/js/20.db6b5bc1.js"><link rel="prefetch" href="/assets/js/21.2290ab04.js"><link rel="prefetch" href="/assets/js/3.98d88c2a.js"><link rel="prefetch" href="/assets/js/4.9c04f59f.js"><link rel="prefetch" href="/assets/js/5.1d3984a2.js"><link rel="prefetch" href="/assets/js/6.d76c0767.js"><link rel="prefetch" href="/assets/js/7.96c54fe3.js"><link rel="prefetch" href="/assets/js/8.77f3fb04.js"><link rel="prefetch" href="/assets/js/9.deef4369.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.00c5e757.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">DT-Three</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Guide/install.html" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/API/threeView.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  API
+</a></div><div class="nav-item"><a href="http://172.30.251.13:8888/dtgd-web/three-dtgd" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  源码仓库
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://threejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Three.js文档主页
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Guide/install.html" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/API/threeView.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  API
+</a></div><div class="nav-item"><a href="http://172.30.251.13:8888/dtgd-web/three-dtgd" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  源码仓库
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://threejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Three.js文档主页
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/API/threeView.html" aria-current="page" class="active sidebar-link">ThreeView</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/API/threeView.html#概述" class="sidebar-link">概述</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#属性" class="sidebar-link">属性</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/API/threeView.html#container" class="sidebar-link">container</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#width" class="sidebar-link">width</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#heigth" class="sidebar-link">heigth</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#renderer" class="sidebar-link">renderer</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#scene" class="sidebar-link">scene</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#scene2" class="sidebar-link">scene2</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#camera" class="sidebar-link">camera</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#controls" class="sidebar-link">controls</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#lights" class="sidebar-link">lights</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#models" class="sidebar-link">models</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#stats" class="sidebar-link">stats</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#clock" class="sidebar-link">clock</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#raycaster" class="sidebar-link">raycaster</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#composer" class="sidebar-link">composer</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#renderpass" class="sidebar-link">renderPass</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#bloomrendererpass" class="sidebar-link">bloomRendererPass</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#fxaarendererpass" class="sidebar-link">fxaaRendererPass</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#minimap" class="sidebar-link">miniMap</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#widget" class="sidebar-link">widget</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#widget3d" class="sidebar-link">widget3D</a></li></ul></li><li class="sidebar-sub-header"><a href="/API/threeView.html#方法" class="sidebar-link">方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/API/threeView.html#constructor-threeapp" class="sidebar-link">constructor()/ThreeApp()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#addstats" class="sidebar-link">AddStats()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#removestats" class="sidebar-link">RemoveStats()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#setcameraposition" class="sidebar-link">SetCameraPosition()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#setcontroltarget" class="sidebar-link">SetControlTarget()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#loadgltfmodel" class="sidebar-link">LoadGLTFModel()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#addgltfmodeltoscene" class="sidebar-link">AddGLTFModelToScene()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#removemodelfromgroup" class="sidebar-link">RemoveModelFromGroup()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#unloadmodel" class="sidebar-link">UnLoadModel()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#playkeyframeanimation" class="sidebar-link">PlayKeyFrameAnimation()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#playallkeyframeanimations" class="sidebar-link">PlayAllKeyFrameAnimations()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#pausekeyframeanimation" class="sidebar-link">PauseKeyFrameAnimation()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#pauseallkeyframeanimations" class="sidebar-link">PauseAllKeyFrameAnimations()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#stopkeyframeanimation" class="sidebar-link">StopKeyFrameAnimation()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#stopallkeyframeanimations" class="sidebar-link">StopAllKeyFrameAnimations()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#removemixerfromqueue" class="sidebar-link">RemoveMixerFromQueue()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#showminimap" class="sidebar-link">ShowMiniMap()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#hideminimap" class="sidebar-link">HideMiniMap()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#zoomin" class="sidebar-link">ZoomIn()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#zoomout" class="sidebar-link">ZoomOut()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#setorbitcontrols" class="sidebar-link">SetOrbitControls()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#setpointerlockcontrols" class="sidebar-link">SetPointerLockControls()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#setandrestoreorbitcontrols" class="sidebar-link">SetAndRestoreOrbitControls()</a></li><li class="sidebar-sub-header"><a href="/API/threeView.html#destroy" class="sidebar-link">Destroy()</a></li></ul></li></ul></li><li><a href="/API/camera.html" class="sidebar-link">Camera</a></li><li><a href="/API/object3d.html" class="sidebar-link">Object3D</a></li><li><a href="/API/animation.html" class="sidebar-link">Animation</a></li><li><a href="/API/css2DWidget.html" class="sidebar-link">CSS2DWidget</a></li><li><a href="/API/css3DWidget.html" class="sidebar-link">CSS3DWidget</a></li><li><a href="/API/cssAnimate.html" class="sidebar-link">CSSAnimate</a></li><li><a href="/API/curve.html" class="sidebar-link">Multiline</a></li><li><a href="/API/events.html" class="sidebar-link">Events</a></li><li><a href="/API/math.html" class="sidebar-link">Math</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="threeview"><a href="#threeview" class="header-anchor">#</a> ThreeView</h1> <h2 id="概述"><a href="#概述" class="header-anchor">#</a> 概述</h2> <p>为降低 Three.js 对无三维开发经验，我在框架中开发了一个入口类用来固定渲染流程。渲染过程的执行大致分为如下几步：</p> <html><img src="/imgs/api/1.png"></html> <h2 id="属性"><a href="#属性" class="header-anchor">#</a> 属性</h2> <h3 id="container"><a href="#container" class="header-anchor">#</a> container</h3> <ul><li><p>类型：<code>HTMLElement</code></p></li> <li><p>描述：三维组件的<code>document</code>容器，它的底层是通过 <code>canvas</code> 实现。</p></li></ul> <h3 id="width"><a href="#width" class="header-anchor">#</a> width</h3> <ul><li><p>类型：<code>number</code></p></li> <li><p>描述：容器宽度，它获取的是<code>container</code>的<code>offsetWidth</code>属性。</p></li></ul> <h3 id="heigth"><a href="#heigth" class="header-anchor">#</a> heigth</h3> <ul><li><p>类型：<code>number</code></p></li> <li><p>描述：容器高度，它获取的是<code>container</code>的<code>offsetHeight</code>属性。</p></li></ul> <h3 id="renderer"><a href="#renderer" class="header-anchor">#</a> renderer</h3> <ul><li><p>类型： <code>THREE.WebGLRenderer</code></p></li> <li><p>描述：画面渲染器</p></li></ul> <h3 id="scene"><a href="#scene" class="header-anchor">#</a> scene</h3> <ul><li><p>类型：<code>THREE.Scene</code></p></li> <li><p>描述：三维场景的容器对象，通过它可以访问到场景内所有存在的实体对象。</p></li></ul> <h3 id="scene2"><a href="#scene2" class="header-anchor">#</a> scene2</h3> <ul><li><p>类型：<code>THREE.Scene</code></p></li> <li><p>描述：三维场景内<code>3DWidget</code>的容器对象，这个对象通常不用，仅仅是预留的一个接口。</p></li></ul> <h3 id="camera"><a href="#camera" class="header-anchor">#</a> camera</h3> <ul><li><p>类型：<code>THREE.PerspectiveCamera</code></p></li> <li><p>描述：三维场景内摄像机对象。</p></li></ul> <h3 id="controls"><a href="#controls" class="header-anchor">#</a> controls</h3> <ul><li><p>类型：<code>THREE.OrbitControls</code></p></li> <li><p>描述：场景控制器，完成鼠标对画面的缩放、旋转、平移。</p></li></ul> <h4 id="controls-autorotate"><a href="#controls-autorotate" class="header-anchor">#</a> controls.autoRotate</h4> <ul><li><p>类型：<code>Boolean</code></p></li> <li><p>默认值： <code>false</code></p></li> <li><p>描述：控制控制器是否自动旋转。</p></li></ul> <h4 id="controls-enablepan"><a href="#controls-enablepan" class="header-anchor">#</a> controls.enablePan</h4> <ul><li><p>类型：<code>Boolean</code></p></li> <li><p>默认值： <code>true</code></p></li> <li><p>描述：控制控制器是否能移动视角。</p></li></ul> <h4 id="controls-enabledamping"><a href="#controls-enabledamping" class="header-anchor">#</a> controls.enableDamping</h4> <ul><li><p>类型：<code>Boolean</code></p></li> <li><p>默认值： <code>true</code></p></li> <li><p>描述：控制控制器旋转移动视角是否有阻尼感。</p></li></ul> <h3 id="lights"><a href="#lights" class="header-anchor">#</a> lights</h3> <ul><li><p>类型：<code>THREE.Group</code></p></li> <li><p>描述：灯光组，该属性内存放场景所有的灯光。</p></li></ul> <h3 id="models"><a href="#models" class="header-anchor">#</a> models</h3> <ul><li><p>类型：<code>THREE.Group</code></p></li> <li><p>描述：模型组，该属性内存放场景所有外来加载的模型。</p></li></ul> <h3 id="stats"><a href="#stats" class="header-anchor">#</a> stats</h3> <ul><li><p>类型：<code>THREE.Stats</code></p></li> <li><p>描述：性能监视面板，开发模式中监控帧率、内存、操作延时用的。</p></li></ul> <h3 id="clock"><a href="#clock" class="header-anchor">#</a> clock</h3> <ul><li><p>类型：<code>THREE.Clock</code></p></li> <li><p>描述：<code>runtime</code>内置时钟，用于记录时间。</p></li></ul> <h3 id="raycaster"><a href="#raycaster" class="header-anchor">#</a> raycaster</h3> <ul><li><p>类型：<code>THREE.Raycaster</code></p></li> <li><p>描述：场景内置射线对象，用于模型点击、悬停、双击、右键等交互操作的接口。</p></li></ul> <h3 id="composer"><a href="#composer" class="header-anchor">#</a> composer</h3> <ul><li><p>类型：<code>EffectComposer</code></p></li> <li><p>描述：<code>three.js</code>的后处理接口，它是一个调制器将所有后处理效果叠加。</p></li></ul> <h3 id="renderpass"><a href="#renderpass" class="header-anchor">#</a> renderPass</h3> <ul><li><p>类型：<code>RenderPass</code></p></li> <li><p>描述：后处理的原始画面通道。</p></li></ul> <h3 id="bloomrendererpass"><a href="#bloomrendererpass" class="header-anchor">#</a> bloomRendererPass</h3> <ul><li><p>类型：<code>UnrealBloomPass</code></p></li> <li><p>描述：<code>bloom</code>光效后处理通道，效果类似会发光的霓虹灯效果。</p></li></ul> <h3 id="fxaarendererpass"><a href="#fxaarendererpass" class="header-anchor">#</a> fxaaRendererPass</h3> <ul><li><p>类型：<code>ShaderPass</code></p></li> <li><p>描述：<code>FXAA</code>快速抗锯齿通道。</p></li></ul> <h3 id="minimap"><a href="#minimap" class="header-anchor">#</a> miniMap</h3> <ul><li><p>类型：<code>Object</code></p></li> <li><p>描述：该对象是一个小地图的容器，挂载所有和<code>miniMap</code>相关的属性。</p></li></ul> <h4 id="minimap-size"><a href="#minimap-size" class="header-anchor">#</a> miniMap.size</h4> <ul><li><p>类型：<code>Object</code></p></li> <li><p>数据结构：</p></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    width<span class="token operator">:</span> number<span class="token punctuation">,</span>
+    heigth<span class="token operator">:</span> number
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>默认值：</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    width<span class="token operator">:</span> <span class="token number">128</span><span class="token punctuation">,</span>
+    heigth<span class="token operator">:</span> <span class="token number">128</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>描述：小地图的<code>element</code>元素大小。</li></ul> <h4 id="minimap-size-2"><a href="#minimap-size-2" class="header-anchor">#</a> miniMap.size</h4> <ul><li><p>类型：<code>Object</code></p></li> <li><p>数据结构：</p></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    width<span class="token operator">:</span> number<span class="token punctuation">,</span>
+    heigth<span class="token operator">:</span> number
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>默认值：</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    width<span class="token operator">:</span> <span class="token number">128</span><span class="token punctuation">,</span>
+    heigth<span class="token operator">:</span> <span class="token number">128</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>描述：小地图的<code>element</code>元素大小。</li></ul> <h4 id="minimap-left"><a href="#minimap-left" class="header-anchor">#</a> miniMap.left</h4> <ul><li><p>类型：<code>number</code></p></li> <li><p>默认值：<code>0</code></p></li> <li><p>描述：小地图的<code>element</code>元素距离<code>container</code>左侧的相对位置。</p></li></ul> <h4 id="minimap-rigth"><a href="#minimap-rigth" class="header-anchor">#</a> miniMap.rigth</h4> <ul><li><p>类型：<code>number</code></p></li> <li><p>默认值：<code>undefined</code></p></li> <li><p>描述：小地图的<code>element</code>元素距离<code>container</code>右侧的相对位置。</p></li></ul> <h4 id="minimap-top"><a href="#minimap-top" class="header-anchor">#</a> miniMap.top</h4> <ul><li><p>类型：<code>number</code></p></li> <li><p>默认值：<code>0</code></p></li> <li><p>描述：小地图的<code>element</code>元素距离<code>container</code>顶部的相对位置。</p></li></ul> <h4 id="minimap-bottom"><a href="#minimap-bottom" class="header-anchor">#</a> miniMap.bottom</h4> <ul><li><p>类型：<code>number</code></p></li> <li><p>默认值：<code>undefined</code></p></li> <li><p>描述：小地图的<code>element</code>元素距离<code>container</code>底部的相对位置。</p></li></ul> <h4 id="minimap-layout"><a href="#minimap-layout" class="header-anchor">#</a> miniMap.layout</h4> <ul><li><p>类型：<code>string</code></p></li> <li><p>默认值：<code>tl</code></p></li> <li><p>描述：小地图的<code>element</code>元素相对于<code>container</code>的相对定位模式，有<code>tl</code>（左上）,<code>bl</code>（左下）,<code>tr</code>（右上）,<code>br</code>（右下）四种模式。默认为<code>tl</code>（左上）。</p></li></ul> <h4 id="minimap-camera"><a href="#minimap-camera" class="header-anchor">#</a> miniMap.camera</h4> <ul><li><p>类型：<code>OrthographCamera</code></p></li> <li><p>描述：小地图的摄像机接口，可以控制它完成小地图的缩放、位置移动。</p></li></ul> <h4 id="minimap-camera-default"><a href="#minimap-camera-default" class="header-anchor">#</a> miniMap.camera.default</h4> <ul><li><p>类型： <code>Object</code></p></li> <li><p>描述：小地图摄像机默认属性容器。</p></li></ul> <h4 id="minimap-camera-default-width"><a href="#minimap-camera-default-width" class="header-anchor">#</a> miniMap.camera.default.width</h4> <ul><li><p>类型： <code>number</code></p></li> <li><p>默认值： <code>30</code></p></li> <li><p>描述：小地图摄像机默认宽度。</p></li></ul> <h4 id="minimap-camera-default-height"><a href="#minimap-camera-default-height" class="header-anchor">#</a> miniMap.camera.default.height</h4> <ul><li><p>类型： <code>number</code></p></li> <li><p>默认值： <code>30/miniMap.renderer.getPixelRatio()</code></p></li> <li><p>描述：小地图摄像机默认高度。</p></li></ul> <h4 id="minimap-camera-default-zoom"><a href="#minimap-camera-default-zoom" class="header-anchor">#</a> miniMap.camera.default.zoom</h4> <ul><li><p>类型： <code>number</code></p></li> <li><p>默认值： <code>1</code></p></li> <li><p>描述：小地图摄像机默认缩放倍率。</p></li></ul> <h4 id="minimap-camera-default-minwidth"><a href="#minimap-camera-default-minwidth" class="header-anchor">#</a> miniMap.camera.default.minWidth</h4> <ul><li><p>类型： <code>number</code></p></li> <li><p>默认值： <code>1</code></p></li> <li><p>描述：小地图摄像机默认最小缩放尺寸。</p></li></ul> <h4 id="minimap-camera-default-maxwidth"><a href="#minimap-camera-default-maxwidth" class="header-anchor">#</a> miniMap.camera.default.maxWidth</h4> <ul><li><p>类型： <code>number</code></p></li> <li><p>默认值： <code>30</code></p></li> <li><p>描述：小地图摄像机默认最大缩放尺寸。</p></li></ul> <h4 id="minimap-tag"><a href="#minimap-tag" class="header-anchor">#</a> miniMap.tag</h4> <ul><li><p>类型：<code>Tag</code></p></li> <li><p>描述：小地图的当前位置对象，<code>Tag</code>类型的详细内容会在后面看到。</p></li></ul> <h3 id="widget"><a href="#widget" class="header-anchor">#</a> widget</h3> <ul><li><p>类型：<code>Object</code></p></li> <li><p>描述：该对象是一个<code>2DWidget</code>的容器，挂载所有和<code>2DWidget</code>相关的属性。现在只有<code>renderer</code>这个属性在该属性内。</p></li></ul> <h4 id="widget-renderer"><a href="#widget-renderer" class="header-anchor">#</a> widget.renderer</h4> <ul><li><p>类型：<code>CSS2DRenderer</code></p></li> <li><p>描述：<code>2DWidget</code>的渲染器，负责以 DOM 叠加的形式渲染<code>2DWidget</code>。</p></li></ul> <h3 id="widget3d"><a href="#widget3d" class="header-anchor">#</a> widget3D</h3> <ul><li><p>类型：<code>Object</code></p></li> <li><p>描述：该对象是一个<code>3DWidget</code>的容器，挂载所有和<code>3DWidget</code>相关的属性。现在只有<code>renderer</code>和<code>group</code>这个属性在该属性内。</p></li></ul> <h4 id="widget3d-renderer"><a href="#widget3d-renderer" class="header-anchor">#</a> widget3D.renderer</h4> <ul><li><p>类型：<code>CSS3DRenderer</code></p></li> <li><p>描述：<code>3DWidget</code>的渲染器，负责以 DOM 叠加的形式渲染<code>3DWidget</code>。</p></li></ul> <h4 id="widget3d-group"><a href="#widget3d-group" class="header-anchor">#</a> widget3D.group</h4> <ul><li><p>类型：<code>THREE.Group</code></p></li> <li><p>描述：<code>3DWidget</code>的对象组，它是<code>scene2</code>的子对象，负责访问<code>3DWidget</code>在场景内的所有三维实体子对象。</p></li></ul> <h2 id="方法"><a href="#方法" class="header-anchor">#</a> 方法</h2> <h3 id="constructor-threeapp"><a href="#constructor-threeapp" class="header-anchor">#</a> constructor()/ThreeApp()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：<code>Object</code></p></li> <li><p>详细：构造方法，该方法完成了三维组件的画面初始化。通过传入的参数不同可以配置三维画面、摄像机、控制器、小地图等等一些属性，</p></li> <li><p>参数完整数据结构：</p></li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token punctuation">{</span>
+    el<span class="token operator">:</span> HTMLElement<span class="token punctuation">,</span>
+    stats<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+    envMap<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token comment">// HDR贴图路径</span>
+    cameraPosition<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token builtin">number</span><span class="token punctuation">]</span> <span class="token comment">// 摄像机初始位置</span>
+    controls<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        target<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token builtin">number</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//控制器焦点</span>
+        autoRotate<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span> <span class="token comment">// 是否自动旋转</span>
+        pan<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token comment">// 是否移动</span>
+    <span class="token punctuation">}</span>
+    background<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">// 渲染器背景</span>
+        color<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token comment">// rgba写法，形如rgba(255, 0, 0, 1)</span>
+        alpha<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token comment">// 0~1的数字</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    miniMap<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        size<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token builtin">number</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 长度为2的数字数组</span>
+        position<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            left<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token comment">// 距三维组件左边缘距离</span>
+            right<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token comment">// 距三维组件右边缘距离</span>
+            top<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token comment">// 距三维组件上边缘距离</span>
+            bottom<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token comment">// 距三维组件下边缘距离</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        camera<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            size<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span>，<span class="token comment">// 摄像机尺寸</span>
+            near<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token comment">// 近视面尺寸</span>
+            far<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token comment">// 远视面尺寸</span>
+            zoom<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token comment">// 缩放倍率</span>
+            minWidth<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token comment">// 最小宽度</span>
+            maxWidth<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token comment">// 最大宽度</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    bloomPass<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token comment">// 是否启用bloomPass</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">说明：</p> <ul><li>其中带有?的属性是非必需属性。</li> <li><code>left</code>，<code>right</code>，<code>top</code>，<code>bottom</code>这四个属性只能两两出现，且<code>left</code>和<code>right</code>不能同时出现、<code>top</code>，<code>bottom</code>不能同时出现。</li> <li>envMap 在 dt-data 项目中会导致传入的 HDR 贴图从<code>ArrayBuffer</code>变为<code>string</code>造成错误，所以在 dt-data 项目中，请勿配置该属性。</li> <li>该构造函数为异步加载，所以该构造方法用<code>Promise</code>包裹并抛出<code>resolve</code>和<code>reject</code>更为合适。</li></ul></div> <ul><li>示例</li></ul> <p>html 部分</p> <div class="language-HTML extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>three<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>content<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>js 部分</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">const</span> el <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'three'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> stats <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token keyword">const</span> envMap <span class="token operator">=</span> envMapPath
+<span class="token keyword">const</span> cameraPos <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">]</span>
+<span class="token keyword">const</span> target <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token keyword">const</span> backgroundColor <span class="token operator">=</span> <span class="token string">'rgba(255, 0, 0, 1)'</span>
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    el<span class="token operator">:</span> el<span class="token punctuation">,</span>
+    stats<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    envMap<span class="token operator">:</span> envMapPath<span class="token punctuation">,</span>
+    cameraPosition<span class="token operator">:</span> cameraPos<span class="token punctuation">,</span>
+    controls<span class="token operator">:</span> <span class="token punctuation">{</span>
+        target<span class="token operator">:</span> target<span class="token punctuation">,</span>
+        autoRotate<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        pan<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    background<span class="token operator">:</span> <span class="token punctuation">{</span>
+        color<span class="token operator">:</span> backgroundColor<span class="token punctuation">,</span>
+        alpha<span class="token operator">:</span> <span class="token number">0.2</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    miniMap<span class="token operator">:</span> <span class="token punctuation">{</span>
+        size<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 长度为2的数字数组</span>
+        position<span class="token operator">:</span> <span class="token punctuation">{</span>
+            left<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">// 距三维组件左边缘距离</span>
+            top<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">// 距三维组件右边缘距离</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        camera<span class="token operator">:</span> <span class="token punctuation">{</span>
+            near<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">// 近视面尺寸</span>
+            far<span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token comment">// 远视面尺寸</span>
+            zoom<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">// 缩放倍率</span>
+            minWidth<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">// 地图最小尺寸</span>
+            maxWidth<span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token comment">// 地图最大尺寸</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+</code></pre></div><p>css 部分</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.content</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 600px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">说明：</p> <ul><li>被挂载的元素 <code>el</code> 必须有尺寸，否则三维组件的画面无法被渲染。</li></ul></div> <h3 id="addstats"><a href="#addstats" class="header-anchor">#</a> AddStats()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：无</p></li> <li><p>详细：在页面上增加性能监视面板插件。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">AddStats</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="removestats"><a href="#removestats" class="header-anchor">#</a> RemoveStats()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：无</p></li> <li><p>详细：在页面上移除性能监视面板插件。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">AddStats</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// do what you want</span>
+
+app<span class="token punctuation">.</span><span class="token function">RemoveStats</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="setcameraposition"><a href="#setcameraposition" class="header-anchor">#</a> SetCameraPosition()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：<code>[number, number, number]</code></p></li> <li><p>详细：设置摄像机的位置。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> position <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">]</span>
+
+app<span class="token punctuation">.</span><span class="token function">SetCameraPosition</span><span class="token punctuation">(</span>position<span class="token punctuation">)</span>
+</code></pre></div><h3 id="setcontroltarget"><a href="#setcontroltarget" class="header-anchor">#</a> SetControlTarget()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：<code>[number, number, number]</code></p></li> <li><p>详细：设置控制器焦点。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> target <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">]</span>
+
+app<span class="token punctuation">.</span><span class="token function">SetControlTarget</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">说明：</p> <ul><li><code>SetControlTarget()</code>和<code>SetCameraPosition()</code>两个方法最好同时使用来确定你需要固定的摄像机画面。</li></ul></div> <h3 id="loadgltfmodel"><a href="#loadgltfmodel" class="header-anchor">#</a> LoadGLTFModel()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：<code>string</code></p></li> <li><p>详细：加载 glTF 模型,获取模型对象。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">// in async</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+<span class="token keyword">const</span> model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+<span class="token keyword">const</span> mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+<span class="token keyword">const</span> animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    <span class="token keyword">const</span> mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+    <span class="token keyword">const</span> animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">说明：</p> <ul><li>该方法只负责文件加载，并获得该文件对象。</li></ul></div> <h3 id="addgltfmodeltoscene"><a href="#addgltfmodeltoscene" class="header-anchor">#</a> AddGLTFModelToScene()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：<code>Object3D</code></p></li> <li><p>详细：把<code>glTF</code>模型添加到场景。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">// in async function</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+<span class="token keyword">const</span> model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="removemodelfromgroup"><a href="#removemodelfromgroup" class="header-anchor">#</a> RemoveModelFromGroup()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：<code>Object3D</code></p></li> <li><p>详细：把单个模型移除场景。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> model <span class="token operator">=</span> app<span class="token punctuation">.</span>model<span class="token punctuation">.</span>children<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token comment">// 假设场景中该对象存在</span>
+app<span class="token punctuation">.</span><span class="token function">RemoveModelFromGroup</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+</code></pre></div><div class="custom-block danger"><p class="custom-block-title">警告：</p> <ul><li>该方法不仅会把模型移除场景、还会完成几何体、材质的内存释放，所以该方法仅用于移除整个<code>glTF</code>模型，移除单个模型的子对象可能会造成一些不可预知的错误。对于单个模型移除应当使用如下方法</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code>app<span class="token punctuation">.</span>scene<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>targetObj<span class="token punctuation">)</span>
+</code></pre></div></div> <h3 id="unloadmodel"><a href="#unloadmodel" class="header-anchor">#</a> UnLoadModel()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：<code>Object3D, AnimationMixer</code></p></li> <li><p>详细：把<code>glTF</code>模型完全卸载。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">let</span> model<span class="token punctuation">,</span> mixer
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">// in async</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">UnLoadModel</span><span class="token punctuation">(</span>model<span class="token punctuation">,</span> mixer<span class="token punctuation">)</span>
+</code></pre></div><h3 id="playkeyframeanimation"><a href="#playkeyframeanimation" class="header-anchor">#</a> PlayKeyFrameAnimation()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：<code>AnimationMixer, AnimationClip</code></p></li> <li><p>详细：播放单个关键帧动画（骨骼动画也可播放）。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">let</span> model<span class="token punctuation">,</span> mixer
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+
+<span class="token comment">// in async function</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+<span class="token keyword">const</span> animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+    <span class="token keyword">const</span> animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+    app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+app<span class="token punctuation">.</span><span class="token function">PlayKeyFrameAnimation</span><span class="token punctuation">(</span>mixer<span class="token punctuation">,</span> animations<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// 播放第一个动画</span>
+</code></pre></div><h3 id="playallkeyframeanimations"><a href="#playallkeyframeanimations" class="header-anchor">#</a> PlayAllKeyFrameAnimations()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：<code>AnimationMixer, AnimationClip[]</code></p></li> <li><p>详细：播放所有关键帧动画（骨骼动画也可播放）。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">let</span> model<span class="token punctuation">,</span> mixer
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+
+<span class="token comment">// in async function</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+    animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+    app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+app<span class="token punctuation">.</span><span class="token function">PlayAllKeyFrameAnimations</span><span class="token punctuation">(</span>mixer<span class="token punctuation">,</span> animations<span class="token punctuation">)</span> <span class="token comment">// 播放所有动画</span>
+</code></pre></div><h3 id="pausekeyframeanimation"><a href="#pausekeyframeanimation" class="header-anchor">#</a> PauseKeyFrameAnimation()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：<code>AnimationMixer, AnimationClip</code></p></li> <li><p>详细：暂停单个关键帧动画。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">let</span> model<span class="token punctuation">,</span> mixer
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+
+<span class="token comment">// in async function</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+    animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+    app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+app<span class="token punctuation">.</span><span class="token function">PlayKeyFrameAnimation</span><span class="token punctuation">(</span>mixer<span class="token punctuation">,</span> animations<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// 播放第一个动画</span>
+
+app<span class="token punctuation">.</span><span class="token function">PauseKeyFrameAnimation</span><span class="token punctuation">(</span>mixer<span class="token punctuation">,</span> animations<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// 暂停第一个动画</span>
+</code></pre></div><h3 id="pauseallkeyframeanimations"><a href="#pauseallkeyframeanimations" class="header-anchor">#</a> PauseAllKeyFrameAnimations()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：<code>AnimationMixer, AnimationClip[]</code></p></li> <li><p>详细：暂停所有关键帧动画（骨骼动画也可播放）。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">let</span> model<span class="token punctuation">,</span> mixer
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+
+<span class="token comment">// in async function</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+    animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+    app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+app<span class="token punctuation">.</span><span class="token function">PlayAllKeyFrameAnimations</span><span class="token punctuation">(</span>mixer<span class="token punctuation">,</span> animations<span class="token punctuation">)</span> <span class="token comment">// 播放所有动画</span>
+
+app<span class="token punctuation">.</span><span class="token function">PauseAllKeyFrameAnimations</span><span class="token punctuation">(</span>mixer<span class="token punctuation">,</span> animations<span class="token punctuation">)</span> <span class="token comment">// 暂停所有动画</span>
+</code></pre></div><h3 id="stopkeyframeanimation"><a href="#stopkeyframeanimation" class="header-anchor">#</a> StopKeyFrameAnimation()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：<code>AnimationMixer, AnimationClip</code></p></li> <li><p>详细：停止单个关键帧动画。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">let</span> model<span class="token punctuation">,</span> mixer
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+
+<span class="token comment">// in async function</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+    animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+    app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+app<span class="token punctuation">.</span><span class="token function">PlayKeyFrameAnimation</span><span class="token punctuation">(</span>mixer<span class="token punctuation">,</span> animations<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// 播放第一个动画</span>
+
+app<span class="token punctuation">.</span><span class="token function">StopKeyFrameAnimation</span><span class="token punctuation">(</span>mixer<span class="token punctuation">,</span> animations<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// 暂停第一个动画</span>
+</code></pre></div><h3 id="stopallkeyframeanimations"><a href="#stopallkeyframeanimations" class="header-anchor">#</a> StopAllKeyFrameAnimations()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：<code>AnimationMixer, AnimationClip[]</code></p></li> <li><p>详细：暂停所有关键帧动画（骨骼动画也可播放）。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">let</span> model<span class="token punctuation">,</span> mixer
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+
+<span class="token comment">// in async function</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+    animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+    app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+app<span class="token punctuation">.</span><span class="token function">PlayAllKeyFrameAnimations</span><span class="token punctuation">(</span>mixer<span class="token punctuation">,</span> animations<span class="token punctuation">)</span> <span class="token comment">// 播放所有动画</span>
+
+app<span class="token punctuation">.</span><span class="token function">StopAllKeyFrameAnimations</span><span class="token punctuation">(</span>mixer<span class="token punctuation">,</span> animations<span class="token punctuation">)</span> <span class="token comment">// 停止所有动画</span>
+</code></pre></div><h3 id="removemixerfromqueue"><a href="#removemixerfromqueue" class="header-anchor">#</a> RemoveMixerFromQueue()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：<code>AnimationMixer</code></p></li> <li><p>详细：移除动画混合器。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">let</span> model<span class="token punctuation">,</span> mixer
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+
+<span class="token comment">// in async function</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+    animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+    app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+app<span class="token punctuation">.</span><span class="token function">RemoveMixerFromQueue</span><span class="token punctuation">(</span>mixer<span class="token punctuation">)</span>
+</code></pre></div><h3 id="showminimap"><a href="#showminimap" class="header-anchor">#</a> ShowMiniMap()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：无</p></li> <li><p>详细：调用该方法显示小地图，如果在初始化配置方法中没有配置 miniMap 属性，该方法不会有任何作用。</p></li> <li><p>示例：</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">let</span> model<span class="token punctuation">,</span> mixer
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+    <span class="token operator">...</span>customAttribute<span class="token punctuation">,</span>
+    miniMap<span class="token operator">:</span> <span class="token punctuation">{</span>
+        size<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">300</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+
+<span class="token comment">// in async function</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+    animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+    app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 显示小地图</span>
+app<span class="token punctuation">.</span><span class="token function">ShowMiniMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="hideminimap"><a href="#hideminimap" class="header-anchor">#</a> HideMiniMap()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：无</p></li> <li><p>详细：调用该方法隐藏小地图，如果在初始化配置方法中没有配置 miniMap 属性，该方法不会有任何作用。</p></li> <li><p>示例：</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">let</span> model<span class="token punctuation">,</span> mixer
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+    <span class="token operator">...</span>customAttribute<span class="token punctuation">,</span>
+    miniMap<span class="token operator">:</span> <span class="token punctuation">{</span>
+        size<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">300</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+
+<span class="token comment">// in async function</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+    animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+    app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 显示小地图</span>
+app<span class="token punctuation">.</span><span class="token function">ShowMiniMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 隐藏小地图</span>
+app<span class="token punctuation">.</span><span class="token function">HideMiniMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="zoomin"><a href="#zoomin" class="header-anchor">#</a> ZoomIn()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：<code>number, string</code></p></li> <li><p>详细：调用该方法可以实现平滑缩放小地图，如果在初始化配置方法中没有配置 miniMap 属性，该方法不会有任何作用。对于第一个参数，传入的是动画的时间，单位是毫秒。第二个参数为缩放动画类型。动画类型有<code>liner</code>,<code>ease</code>,<code>easeIn</code>,<code>easeOut</code>,<code>easeInOut</code>,<code>inOutBack</code>这几种。</p></li> <li><p>示例：</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">let</span> model<span class="token punctuation">,</span> mixer
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+    <span class="token operator">...</span>customAttribute<span class="token punctuation">,</span>
+    miniMap<span class="token operator">:</span> <span class="token punctuation">{</span>
+        size<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">300</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+
+<span class="token comment">// in async function</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+    animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+    app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 显示小地图</span>
+app<span class="token punctuation">.</span><span class="token function">ShowMiniMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 缩放小地图</span>
+app<span class="token punctuation">.</span><span class="token function">ZoomIn</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">,</span> <span class="token string">'easeInOut'</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="zoomout"><a href="#zoomout" class="header-anchor">#</a> ZoomOut()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：<code>number, string</code></p></li> <li><p>详细：调用该方法可以实现平滑缩放小地图，如果在初始化配置方法中没有配置 miniMap 属性，该方法不会有任何作用。对于第一个参数，传入的是动画的时间，单位是毫秒。第二个参数为缩放动画类型。动画类型有<code>liner</code>,<code>ease</code>,<code>easeIn</code>,<code>easeOut</code>,<code>easeInOut</code>,<code>inOutBack</code>这几种。</p></li> <li><p>示例：</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">let</span> model<span class="token punctuation">,</span> mixer
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+    <span class="token operator">...</span>customAttribute<span class="token punctuation">,</span>
+    miniMap<span class="token operator">:</span> <span class="token punctuation">{</span>
+        size<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">300</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+
+<span class="token comment">// in async function</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+    animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+    app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 显示小地图</span>
+app<span class="token punctuation">.</span><span class="token function">ShowMiniMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 缩放小地图</span>
+app<span class="token punctuation">.</span><span class="token function">ZoomOut</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">,</span> <span class="token string">'easeInOut'</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="setorbitcontrols"><a href="#setorbitcontrols" class="header-anchor">#</a> SetOrbitControls()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：<code>[number, number, number]</code></p></li> <li><p>详细：将控制器切换为<code>OrbitControls</code>，<code>OrbitControls</code>为最常用的三维控制器，由于控制器原本就是<code>OrbitControls</code>，所以一般情况不需要使用该方法切换。传入参数为一个长度为 3 的纯数字数组。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">let</span> model<span class="token punctuation">,</span> mixer
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+
+<span class="token comment">// in async function</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+    animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+    app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// ... do something change app's controls</span>
+
+<span class="token keyword">const</span> target <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
+app<span class="token punctuation">.</span><span class="token function">SetOrbitControls</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span>
+</code></pre></div><h3 id="setpointerlockcontrols"><a href="#setpointerlockcontrols" class="header-anchor">#</a> SetPointerLockControls()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：无</p></li> <li><p>详细：将控制器切换为<code>PointerLockControls</code>，<code>PointerLockControls</code>为第一人称漫游控制器。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">let</span> model<span class="token punctuation">,</span> mixer
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+
+<span class="token comment">// in async function</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+    animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+    app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">SetPointerLockControls</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="setandrestoreorbitcontrols"><a href="#setandrestoreorbitcontrols" class="header-anchor">#</a> SetAndRestoreOrbitControls()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：无</p></li> <li><p>详细：将控制器切换为<code>OrbitControls</code>，并恢复为之前的相关参数。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">let</span> model<span class="token punctuation">,</span> mixer
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+
+<span class="token comment">// in async function</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+    animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+    app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">SetAndRestoreOrbitControls</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="destroy"><a href="#destroy" class="header-anchor">#</a> Destroy()</h3> <ul><li><p>类型：<code>Function</code></p></li> <li><p>参数类型：无</p></li> <li><p>详细：三维组件在销毁时完成垃圾回收、内存释放。垃圾回收完成了渲染器内存释放、场景内对象的内存释放。</p></li> <li><p>示例:</p></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> ThreeApp <span class="token keyword">from</span> <span class="token string">'$user/three/Entry/ThreeView'</span>
+
+<span class="token keyword">let</span> model<span class="token punctuation">,</span> mixer
+
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// add what you want</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreeApp</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'/modelUrl'</span>
+
+<span class="token comment">//------------------模型和动画加载----------------------</span>
+
+<span class="token comment">// in async function</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+
+<span class="token comment">// or</span>
+app<span class="token punctuation">.</span><span class="token function">LoadGLTFModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    model <span class="token operator">=</span> res<span class="token punctuation">.</span>obj3d
+    mixer <span class="token operator">=</span> res<span class="token punctuation">.</span>mixer
+    animations <span class="token operator">=</span> res<span class="token punctuation">.</span>animations
+    app<span class="token punctuation">.</span><span class="token function">AddGLTFModelToScene</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">//on app destroy</span>
+app<span class="token punctuation">.</span><span class="token function">Destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/API/camera.html">
+        Camera
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.4326898c.js" defer></script><script src="/assets/js/2.b96e8ba7.js" defer></script><script src="/assets/js/16.46911f9e.js" defer></script>
+  </body>
+</html>
